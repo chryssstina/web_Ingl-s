@@ -12,14 +12,14 @@
 </head>
 <body>
 
+<!-- BARRA DE NAVEGAÇÃO -->
 <div class="superior" >
- <!-- <h1>Hello World</h1> -->
     <div class="barraNaveg">
         <ul>
             <li><a href="default.asp">Home</a></li>
             <li><a href="news.asp">News</a></li>
             <li><a href="contact.asp">Contact</a></li>
-            <li><a href="about.asp">About</a></li>
+
             <li class="modalBtn"><a>Sobre a equipe </a>
                 <div class="modal">
                     <div class="content">
@@ -28,28 +28,88 @@
                     </div>
                 </div>
            </li>
-
-
         </ul>
     </div>
 </div>
+<!--------->
+
+
+<br><br>
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="alan.jpg" style="width:100%">
+      <div class="text"> Pessoa 1</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="ada.png" style="width:100%">
+      <div class="text"> Pessoa 2 </div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="comp.jpg" style="width:100%">
+      <div class="text">Pessoa 3</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="alan.jpg" style="width:100%">
+        <div class="text">Pessoa 4</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="compp.jpg" style="width:100%">
+        <div class="text">Pessoa 5</div>
+      </div>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+<!------------>
 
 
 <div style="overflow:auto">
         <div class="menu">
-            <a href="#">Cada link pode ir para uma pessoa</a>
-            <a href="#">Cada link pode ir para uma pessoa</a>
-            <a href="#">Cada link pode ir para uma pessoa</a>
-            <a href="#">Cada link pode ir para uma pessoa</a>
-        </div>
 
+            <!--mudar isso do lado para depois do texto central-->
+            <a href="ADA.html"> Ada Lovelace</a>
+            <a href="#">Cada link pode ir para uma pessoa</a>
+            <a href="#">Cada link pode ir para uma pessoa</a>
+
+            <div class="gallery">
+                <a target="_blank" href="ADA.html">
+                  <img src="ada.png" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Ada Lovelace</div>
+              </div>
+
+            <div class="gallery">
+                <a target="_blank" href="ADA.html">
+                  <img src="ada.png" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Ada Lovelace</div>
+              </div>
+
+        </div>
+        
+        <!--TEXTO CENTRAL-->
         <div class="main">
             <h2>Grandes nomes da computação</h2>
-            <p>Provaveelmente vai ter um carrossel</p>
             <p>Aqui a gente vai fazer meio que um texto introdutório.</p>
             <p>Testando o texto</p>
-            <p>Testnado o texto</p>
-            <p>Testnado o texto</p>
+            <p>Testando o texto</p>
+            <p>Testando texto</p>
         </div>
 
         <div class="right">
@@ -58,12 +118,16 @@
         </div>
 </div>
 
+<!--RODAPÉ-->
 <div id="rodape">© copyright CC-S2</div>
+<!------>
 
 </body>
 
 
 <script type="text/javascript">
+
+//janela modal
     const switchModal= () =>{
         const modal= document.querySelector('.modal')
         const actualStyle = modal.style.display
@@ -84,5 +148,29 @@
             switchModal()
         }
     }
+
+
+
+// slidesShow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
     </script>
 </html>
