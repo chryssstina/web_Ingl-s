@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 body{
     background-color: #1E1E1E;
     font-family: Saira Condensed;
@@ -96,13 +97,55 @@ body{
   justify-content: center;
   align-items:center;
   width: 80%;
-
+}
+.icone-modal{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  width: 150px;
 }
 
 .texto-modal{
   text-align: justify;
 }
 
+.imagens-modal{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.icone-modal img{
+  width: 100%;
+  height: auto;
+}
+
+.prof{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+@media only screen and (max-width: 680px) {
+  .content{
+    font-size: 15px;
+  }
+
+ .icone-modal {
+   width: 30%;
+ }
+  .content, .conteudo-modal{
+    width: 90%;
+  }
+}
 /*------------ FIM BARRA DE NAVEGAÇÃO --------------*/
 
 
@@ -162,9 +205,12 @@ img{
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .nome-pessoa-slide {font-size: 11px}
+/*Define essas configurações para este tamanho de tela*/
+@media only screen and (max-width: 680px) {
+  .nome-pessoa-slide {
+    font-size: 20px; 
+    padding:0;
+  }
 }
 /*-----------FIM DO SLIDE------------------------*/
 
@@ -198,7 +244,7 @@ img{
 .galeria-imagens{
   float: left;
   width: 100%;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; /*espaçamentos equivalentes entre si*/
@@ -220,14 +266,14 @@ img{
   border-radius: 20px;
 }
 
-div.galeria-card img {
+.galeria-card img {
   width: 100%;
   height: auto;
   border-radius: 15px;
 
 }
 
-.galeria-descricao{
+.galeria-descricao, .icone-modal{
   padding: 15px;
   text-align: center;
   color:#D9B48F;
@@ -283,4 +329,4 @@ div.galeria-card img {
     width: 100%;
     padding: 0;
   }
-}
+  }
