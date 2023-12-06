@@ -10,7 +10,7 @@
             modal.style.display= 'block'
         }
     }
-
+ 
     const btn = document.querySelector('.modalBtn')
     btn.addEventListener('click', switchModal)
 
